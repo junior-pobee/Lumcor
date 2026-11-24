@@ -24,3 +24,5 @@
 .status-card .secondary-button{align-self:flex-start;margin-top:10px}
 #sendButton:disabled{opacity:.45;cursor:not-allowed}
 @media(max-width:480px){.auth-card{padding:23px 19px}.auth-card h1{font-size:26px}.sidebar-actions{grid-template-columns:1fr 1fr}}
+
+.auth-feedback{min-height:18px;line-height:1.5;color:var(--accent);font-size:11px;text-align:center;margin:14px 0 0}.auth-submit:disabled{opacity:.65;cursor:wait}.auth-field input:focus{border-color:var(--accent);outline:2px solid #58d6b033}
