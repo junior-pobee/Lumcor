@@ -1,4 +1,4 @@
-const CACHE_NAME="lumcor-shell-v6";
+const CACHE_NAME="lumcor-shell-v7";
 const ASSETS=["./","./index.html","./style.css","./main.js"];
 const SUPABASE_CDN="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.2/dist/umd/supabase.min.js";
 self.addEventListener("install",event=>{event.waitUntil((async()=>{const cache=await caches.open(CACHE_NAME);await cache.addAll(ASSETS);try{const response=await fetch(SUPABASE_CDN,{mode:"no-cors"});await cache.put(SUPABASE_CDN,response)}catch(error){}await self.skipWaiting()})())});
