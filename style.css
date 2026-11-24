@@ -359,3 +359,8 @@ body:not(.light) .settings-list-row{border-color:rgba(218,240,229,.12)}
 body:not(.light) .settings-page .text-field{background:#1a2926!important;color:#e8f1eb!important;border-color:rgba(218,240,229,.14)!important}
 @media(max-width:850px){.settings-layout{grid-template-columns:1fr;gap:14px}.settings-nav{position:static;display:flex;overflow-x:auto;white-space:nowrap}.settings-nav a{flex:none}.settings-page{padding:20px}}
 @media(max-width:560px){.settings-page{padding:16px 12px}.settings-page-head{align-items:flex-start;flex-direction:column}.settings-account-chip{width:100%}.settings-people-list{grid-template-columns:1fr}.settings-card{padding:15px}.settings-choice-row,.settings-danger-card{align-items:flex-start;flex-direction:column}.settings-block-row{flex-direction:column}.settings-block-row button{width:100%}.settings-profile-preview{flex-wrap:wrap}.settings-upload-label{margin-left:0}}
+
+.connection-person{display:flex;align-items:center;gap:10px;min-width:0}
+.connection-person>.avatar{width:40px;height:40px;flex:none;overflow:hidden;border-radius:50%}
+.connection-person>span:last-child{min-width:0;display:block}
+.connection-person>span:last-child>span{display:block}
