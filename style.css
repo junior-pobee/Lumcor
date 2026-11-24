@@ -509,3 +509,7 @@ body:not(.light) .market-ad-composer .text-field{background:#202c33!important;co
  body.light .composer{background:#fff!important}
  body.light .composer textarea{color:#111b21!important}
 }
+
+.chat-filters .filter-settings{width:42px;min-width:42px;padding:0;font-size:18px;letter-spacing:1px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;margin-left:auto;border-color:var(--line);color:var(--wa-muted);background:var(--wa-panel)}
+.chat-filters .filter-settings:focus-visible{outline:2px solid var(--wa-green);outline-offset:2px}
+@media(max-width:680px){.chat-filters{display:flex!important;align-items:center;gap:7px;padding-left:14px;padding-right:14px}.chat-filters .filter-settings{margin-left:auto;flex:0 0 42px}}
