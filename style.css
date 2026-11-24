@@ -280,3 +280,22 @@ body:not(.light) .utility-view h1{color:#111b21}
 body:not(.light) .main-panel{background-size:360px 360px!important}
 @media(max-width:900px){.app-shell{grid-template-columns:64px minmax(280px,40vw) minmax(0,1fr)}.app-rail{width:64px;min-width:64px;max-width:64px;padding-left:9px;padding-right:9px}.app-rail .rail-button{width:44px;min-width:44px;max-width:44px;height:44px;min-height:44px;max-height:44px;flex-basis:44px}.app-rail .rail-button svg{width:21px!important;height:21px!important;min-width:21px;min-height:21px;max-width:21px;max-height:21px}}
 @media(max-width:680px){.app-shell{grid-template-columns:56px minmax(0,1fr)}.app-rail{grid-column:1;width:56px;min-width:56px;max-width:56px;padding:14px 6px}.app-rail .rail-button{width:42px;min-width:42px;max-width:42px;height:42px;min-height:42px;max-height:42px;flex-basis:42px}.app-rail .rail-button svg{width:20px!important;height:20px!important;min-width:20px;min-height:20px;max-width:20px;max-height:20px}.sidebar{left:56px;width:calc(100vw - 56px)}.main-panel{grid-column:2}}
+
+html,body{width:100%;min-width:0;min-height:100%;overflow-x:hidden}
+.app-shell{width:100%;max-width:none;min-width:0;min-height:100dvh}
+.main-panel,.sidebar,.conversation,.utility-view{min-width:0;max-width:100%}
+.modal{width:min(460px,calc(100vw - 32px));max-width:calc(100vw - 32px);max-height:calc(100dvh - 32px);margin:auto;padding:clamp(16px,3.5vw,28px);overflow-y:auto;overscroll-behavior:contain;inset:0}
+.modal form{width:100%;min-width:0}
+.modal-heading{gap:12px;margin-bottom:clamp(16px,3vh,24px)}
+.modal-heading h2{font-size:clamp(20px,4vw,25px);overflow-wrap:anywhere}
+.modal .field-label{font-size:clamp(11px,2.5vw,13px);line-height:1.4}
+.modal .text-field{display:block;width:100%;min-width:0;min-height:48px;font-size:16px;padding:13px 14px}
+.modal-feedback{min-height:0;margin:10px 0 0;color:#c05b4f;font-size:12px;line-height:1.5;overflow-wrap:anywhere}
+.modal-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.modal-actions button{min-height:46px;min-width:104px;touch-action:manipulation}
+.modal-actions .primary-button{min-width:130px}
+.modal button:disabled{opacity:.58;cursor:wait;transform:none}
+@media(max-width:760px){.app-shell{grid-template-columns:1fr;min-height:100dvh}.sidebar{width:min(390px,88vw);max-width:88vw}.main-panel{width:100%;min-height:100dvh}.topbar{padding-left:14px;padding-right:14px}.utility-view{width:100%;padding:24px 16px}.conversation{height:calc(100dvh - 68px);min-height:0}}
+@media(max-width:680px){.app-shell{grid-template-columns:56px minmax(0,1fr)}.app-rail{grid-column:1;grid-row:1;width:56px;min-width:56px;max-width:56px}.main-panel{grid-column:2;grid-row:1;width:100%;min-width:0}.sidebar{left:56px;width:calc(100vw - 56px);max-width:calc(100vw - 56px)}.modal{width:calc(100vw - 24px);max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);padding:18px;border-radius:18px}.modal-actions{display:grid;grid-template-columns:1fr 1fr}.modal-actions button{width:100%;min-width:0}}
+@media(max-width:360px){.modal{padding:15px}.modal-heading h2{font-size:19px}.modal-actions{grid-template-columns:1fr}.modal-actions button{min-height:44px}.app-rail .rail-button{width:40px;min-width:40px;max-width:40px}}
+@media(max-height:520px){.modal{max-height:calc(100dvh - 12px);padding-top:12px;padding-bottom:12px}.modal-heading{margin-bottom:10px}.modal-actions{margin-top:12px}.modal .text-field{min-height:42px;padding:9px 12px}}
