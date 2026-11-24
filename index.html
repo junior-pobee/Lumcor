@@ -13,10 +13,19 @@
 <body>
 <div class="auth-screen" id="authScreen"><div class="auth-card"><div class="brand-row auth-brand"><div class="brand-mark" aria-label="Lumcor emblem"><svg viewBox="0 0 48 48" role="img" aria-hidden="true"><path d="M7 10h13v18c0 4 2 6 5 6v9C13 43 7 36 7 26V10Z" fill="currentColor"/><path d="M41 10H28v18c0 4-2 6-5 6v9c12 0 18-7 18-17V10Z" fill="currentColor" opacity=".72"/><path d="M20 10h8v28h-8z" fill="#071b24" opacity=".92"/></svg></div><div class="brand-copy"><strong>Lumcor</strong><span>Stay connected</span></div></div><span class="eyebrow">YOUR PEOPLE. YOUR SPACE.</span><h1 id="authHeading">Welcome to Lumcor</h1><p id="authDescription">Sign in to continue to your conversations.</p><form id="authForm"><div id="signupNameWrap" class="auth-field hidden"><label for="signupName">Display name</label><input id="signupName" class="text-field" maxlength="32" autocomplete="name" placeholder="Your name"></div><div class="auth-field"><label for="authEmail">Email address</label><input id="authEmail" class="text-field" type="email" autocomplete="email" required placeholder="you@example.com"></div><div class="auth-field"><label for="authPassword">Password</label><input id="authPassword" class="text-field" type="password" minlength="8" autocomplete="current-password" required placeholder="At least 8 characters"></div><div id="signupConfirmWrap" class="auth-field hidden"><label for="authPasswordConfirm">Confirm password</label><input id="authPasswordConfirm" class="text-field" type="password" minlength="8" autocomplete="new-password" placeholder="Enter your password again"></div><button class="primary-button auth-submit" id="authSubmit" type="submit">Sign in <span>→</span></button></form><p class="auth-switch"><span id="authSwitchText">New to Lumcor?</span> <button type="button" id="authModeButton">Create an account</button></p><p class="auth-feedback" id="authFeedback" role="status"></p><p class="auth-privacy">Use an email address you control. Never share your password or verification codes.</p></div></div>
 <div class="app-shell hidden" id="appShell">
-<aside class="sidebar" id="sidebar">
+<nav class="app-rail" aria-label="Lumcor navigation">
+<button class="rail-button rail-create" id="newChatButton" aria-label="New conversation" title="New conversation">＋</button>
+<button class="rail-button active" data-view="chats" aria-label="Chats" title="Chats"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v9a2.5 2.5 0 0 1-2.5 2.5H10l-5 4v-4.5a2.5 2.5 0 0 1-1-2Z"/><path d="M8 8h8M8 12h6"/></svg></button>
+<button class="rail-button" data-view="connect" aria-label="Connect" title="Connect"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="10" r="2.5"/><path d="M3 19c.5-3 2.5-4.8 6-4.8 2.2 0 3.8.7 4.8 2M14 15c3.8-.5 6 1.2 6.5 4"/></svg></button>
+<button class="rail-button" data-view="status" aria-label="Status" title="Status"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.8"/><path d="M12 9v6m-3-3h6"/></svg></button>
+<button class="rail-button" data-view="groups" aria-label="Groups" title="Groups"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="8" height="7" rx="2"/><rect x="13" y="4" width="8" height="7" rx="2"/><rect x="3" y="13" width="8" height="7" rx="2"/><rect x="13" y="13" width="8" height="7" rx="2"/></svg></button>
+<button class="rail-button" data-view="calls" aria-label="Calls" title="Calls"><svg viewBox="0 0 24 24"><path d="M7 3.8 10 7l-2 2.2a15 15 0 0 0 6.8 6.8L17 14l3.2 3-.8 3a2 2 0 0 1-2.2 1.4A18.5 18.5 0 0 1 2.6 6.8 2 2 0 0 1 4 4.6Z"/></svg></button>
+<div class="rail-spacer"></div>
+<button class="rail-button rail-settings" id="settingsButton" aria-label="Settings" title="Settings"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-1.8 1.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5v.2h-2.6v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1-1.8-1.8.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H6.3v-2.6h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1 1.8-1.8.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.5v-.2H15v.2a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1 1.8 1.8-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.5 1h.2V14h-.2a1.7 1.7 0 0 0-1.5 1Z"/></svg></button>
+</nav><aside class="sidebar" id="sidebar">
 <div class="brand-row">
 <div class="brand-mark" aria-label="Lumcor emblem"><svg viewBox="0 0 48 48" role="img" aria-hidden="true"><path d="M7 10h13v18c0 4 2 6 5 6v9C13 43 7 36 7 26V10Z" fill="currentColor"/><path d="M41 10H28v18c0 4-2 6-5 6v9c12 0 18-7 18-17V10Z" fill="currentColor" opacity=".72"/><path d="M20 10h8v28h-8z" fill="#071b24" opacity=".92"/></svg></div>
-<div class="brand-copy"><strong>Lumcor</strong><span>Stay connected</span></div>
+<div class="brand-copy"><strong>Lumcor</strong></div>
 <button class="icon-button mobile-close" id="closeSidebar" aria-label="Close chats">×</button>
 </div>
 <div class="profile-strip">
@@ -24,15 +33,9 @@
 <div class="profile-meta"><strong id="profileName">My account</strong><span id="networkStatus">Available</span></div>
 <button class="icon-button" id="profileMenu" aria-label="Profile options">•••</button>
 </div>
-<div class="sidebar-actions">
-<button class="action-button active" data-view="chats"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="4" fill="currentColor" opacity=".22"/><path d="M7 8h10M7 12h7M7 16h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Chats <b id="chatCount">0</b></button>
-<button class="action-button" data-view="connect"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="4" fill="currentColor" opacity=".28"/><circle cx="16.5" cy="15.5" r="3.5" fill="currentColor" opacity=".55"/><path d="M3 19c.8-3 2.8-4.5 6-4.5m5 6c.5-2 1.8-3 3.5-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Connect</button>
-<button class="action-button" data-view="status"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="currentColor" opacity=".2"/><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="2.2" fill="currentColor"/></svg> Status</button>
-<button class="action-button" data-view="groups"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="8" height="7" rx="2" fill="currentColor" opacity=".35"/><rect x="13" y="4" width="8" height="7" rx="2" fill="currentColor"/><rect x="3" y="13" width="8" height="7" rx="2" fill="currentColor"/><rect x="13" y="13" width="8" height="7" rx="2" fill="currentColor" opacity=".35"/></svg> Groups</button>
-<button class="action-button" data-view="calls"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4a3 3 0 0 0-3 3v2a5 5 0 0 0 5 5h2v2a4 4 0 0 0 8 0v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7 4h2a3 3 0 0 1 3 3v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5"/></svg> Calls</button>
-</div>
+
 <div class="section-heading"><span id="listHeading">MESSAGES</span><button class="text-action" id="newChatButton">＋ New</button></div>
-<label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search conversations"></label>
+<label class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.2 4.2"/></svg><input id="searchInput" type="search" placeholder="Search or start a new chat"></label><div class="chat-filters"><button class="filter-chip active" data-chat-filter="all">All</button><button class="filter-chip" data-chat-filter="groups">Groups</button><button class="filter-chip filter-add" id="newChatFilter" aria-label="New conversation">＋</button></div>
 <div class="chat-list" id="chatList"></div>
 <div class="sidebar-footer"><span class="online-dot" id="onlineDot"></span> <span id="connectionLabel">Lumcor preview</span> <span class="footer-version">v0.1</span></div>
 </aside>
@@ -40,16 +43,9 @@
 <header class="topbar">
 <button class="icon-button menu-button" id="openSidebar" aria-label="Open chats">☰</button>
 <div class="topbar-title"><span class="eyebrow">YOUR SPACE</span><strong id="topbarTitle">Messages</strong></div>
-<div class="topbar-actions"><button class="icon-button" id="themeButton" aria-label="Toggle theme">☾</button><button class="icon-button" id="settingsButton" aria-label="Settings">⚙</button></div>
+<div class="topbar-actions"><button class="icon-button" id="themeButton" aria-label="Toggle theme">☾</button></div>
 </header>
-<section class="welcome-panel" id="welcomePanel">
-<div class="welcome-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="welcome-symbol">L</div><span class="spark spark-one">✦</span><span class="spark spark-two">✧</span></div>
-<p class="eyebrow">A BETTER WAY TO CONNECT</p>
-<h1>Every connection<br><span>starts somewhere.</span></h1>
-<p class="welcome-description">Choose a conversation, start a new chat, or create a group. Your Lumcor space is ready.</p>
-<button class="primary-button" id="welcomeNewChat">Start a conversation <span>→</span></button>
-<div class="welcome-note"><span class="online-dot"></span> Your conversations stay on this device in preview mode.</div>
-</section>
+<section class="welcome-panel whatsapp-empty-state" id="welcomePanel"><div class="empty-chat-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 13h44a5 5 0 0 1 5 5v28a5 5 0 0 1-5 5H25L10 61V18a5 5 0 0 1 5-5Z"/><path d="M21 27h23M21 38h17"/></svg></div><h1>No chat selected</h1><div class="encryption-note"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Your personal messages stay private on Lumcor.</span></div></section>
 <section class="conversation hidden" id="conversation">
 <header class="conversation-header">
 <div class="conversation-person"><div class="avatar" id="activeAvatar">A</div><div><strong id="activeName">Contact</strong><span id="activePresence">offline</span></div></div>
