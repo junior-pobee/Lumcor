@@ -374,3 +374,117 @@ body:not(.light) .settings-page .text-field{background:#1a2926!important;color:#
 .settings-conversation-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px}
 .settings-conversation-actions button{padding:8px 10px;font-size:10px}
 @media(max-width:650px){.settings-conversation-row{align-items:flex-start;flex-direction:column}.settings-conversation-actions{width:100%;justify-content:flex-start}.settings-conversation-actions button{flex:1}}
+
+body:not(.light){background:#0b1014!important;color:#e9edef!important}
+body:not(.light) .app-shell,body:not(.light) .sidebar,body:not(.light) .app-rail,body:not(.light) .main-panel{background:#0b1014!important;color:#e9edef!important}
+body:not(.light) .main-panel{background-image:none!important}
+body:not(.light) .profile-strip{background:#111b21!important;border-color:#26343d!important}
+body:not(.light) .profile-meta strong,body:not(.light) .chat-topline strong,body:not(.light) .utility-view h1,body:not(.light) .topbar-title strong{color:#e9edef!important}
+body:not(.light) .profile-meta span,body:not(.light) .chat-topline time,body:not(.light) .chat-bottomline span,body:not(.light) .utility-subtitle{color:#aebac1!important}
+body:not(.light) .search-box{background:#202c33!important;border:0!important}
+body:not(.light) .search-box input{color:#e9edef!important}
+body:not(.light) .filter-chip{background:transparent!important;color:#c6d1d7!important;border-color:#34434b!important}
+body:not(.light) .filter-chip.active{background:#0b3b32!important;color:#8de1c0!important;border-color:#0b3b32!important}
+body:not(.light) .chat-item:hover,body:not(.light) .chat-item.selected{background:#182229!important}
+body:not(.light) .topbar,body:not(.light) .conversation-header{background:#111b21!important;border-color:#26343d!important}
+body:not(.light) .conversation-person strong{color:#e9edef!important}
+body:not(.light) .conversation-person span{color:#aebac1!important}
+body:not(.light) .message-area{background:#0b141a!important}
+body:not(.light) .message-bubble{background:#202c33!important;color:#e9edef!important}
+body:not(.light) .mine .message-bubble{background:#005c4b!important;color:#e9edef!important}
+body:not(.light) .composer-wrap{background:#111b21!important;border-color:#26343d!important}
+body:not(.light) .composer{background:#202c33!important}
+body:not(.light) .composer textarea{color:#e9edef!important}
+body:not(.light) .utility-view{background:#0b1014!important;color:#e9edef!important}
+body:not(.light) .status-card,body:not(.light) .status-post,body:not(.light) .status-composer,body:not(.light) .empty-state{background:#111b21!important;color:#e9edef!important;border-color:#26343d!important}
+body:not(.light) .text-field{background:#202c33!important;color:#e9edef!important;border-color:#34434b!important}
+body:not(.light) .secondary-button{background:#202c33!important;color:#e9edef!important;border-color:#34434b!important}
+.mobile-bottom-nav{display:none}
+.mobile-nav-item{border:0;background:transparent;color:#aebac1;display:grid;justify-items:center;align-content:center;gap:4px;min-width:0;min-height:58px;border-radius:18px;font:500 10px/1.1 "DM Sans",sans-serif;padding:6px 2px}
+.mobile-nav-item svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.mobile-nav-item.active{color:#d9fdd3;background:#064e42}
+.mobile-nav-item span{white-space:nowrap}
+.conversation-back{display:none}
+.marketplace-page{width:min(1100px,100%);margin:0 auto;padding:clamp(18px,3vw,32px);color:var(--wa-text)}
+.marketplace-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:16px}
+.marketplace-heading h1{margin:5px 0;font-size:clamp(28px,4vw,38px);letter-spacing:-1px}
+.marketplace-heading p{margin:0;color:var(--wa-muted);font-size:13px}
+.marketplace-notice{padding:12px 14px;margin-bottom:20px;border:1px solid var(--wa-border);border-radius:12px;color:var(--wa-muted);font-size:12px;line-height:1.5}
+.market-ad-composer{padding:18px;margin-bottom:22px;border:1px solid var(--wa-border);border-radius:18px;background:var(--wa-sidebar);display:grid;gap:12px}
+.market-ad-composer h2{margin:0;font-size:20px}
+.market-ad-composer label{display:grid;gap:7px;font-size:12px;font-weight:700}
+.market-ad-composer textarea{min-height:90px;resize:vertical}
+.market-ad-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.market-ad-help{color:var(--wa-muted);font-size:11px}
+.market-ad-form-actions{display:flex;justify-content:flex-end;gap:9px}
+.market-ad-composer #marketAdFeedback{margin:0;color:var(--wa-green);font-size:12px}
+.marketplace-feed{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.market-ad-card{min-width:0;overflow:hidden;border:1px solid var(--wa-border);border-radius:18px;background:var(--wa-sidebar)}
+.market-ad-owner{display:flex;align-items:center;gap:10px;padding:13px 15px}
+.market-avatar{width:36px;height:36px;display:grid;place-items:center;overflow:hidden;border-radius:50%;background:#d9fdd3;color:#075e54;font-weight:700}
+.market-avatar img{width:100%;height:100%;object-fit:cover}
+.market-ad-owner strong,.market-ad-owner small{display:block}
+.market-ad-owner strong{font-size:12px}
+.market-ad-owner small{margin-top:3px;color:var(--wa-muted);font-size:10px}
+.market-ad-media{width:100%;max-height:340px;display:grid;place-items:center;background:#080d10;overflow:hidden}
+.market-ad-media img,.market-ad-media video{width:100%;max-height:340px;object-fit:contain;display:block}
+.market-ad-media audio{width:calc(100% - 24px);margin:18px 12px}
+.market-ad-copy{padding:15px}
+.market-ad-copy h3{margin:0 0 6px;font-size:16px;overflow-wrap:anywhere}
+.market-ad-price{display:block;color:var(--wa-green);font-size:14px;margin:0 0 7px}
+.market-ad-copy p{margin:0 0 12px;color:var(--wa-muted);font-size:12px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere}
+.market-ad-link{display:inline-flex;color:var(--wa-green);font-size:12px;font-weight:700;text-decoration:none;overflow-wrap:anywhere}
+.market-report-ad,.market-delete-ad{display:block;margin-top:12px;border:0;background:transparent;color:var(--wa-muted);font-size:11px;padding:5px 0}
+body:not(.light) .market-ad-card,body:not(.light) .market-ad-composer{background:#111b21;border-color:#26343d}
+body:not(.light) .marketplace-page{color:#e9edef}
+body:not(.light) .marketplace-notice{border-color:#26343d;color:#aebac1}
+body:not(.light) .market-ad-composer .text-field{background:#202c33!important;color:#e9edef!important;border-color:#34434b!important}
+@media(max-width:760px){.marketplace-feed{grid-template-columns:1fr}.marketplace-page{padding:16px 12px}.marketplace-heading{align-items:flex-start;flex-direction:column}.marketplace-heading>.primary-button{width:100%}.market-ad-fields{grid-template-columns:1fr}}
+@media(max-width:680px){
+ html,body{height:100%;min-height:100%;overflow:hidden}
+ .app-shell{display:block!important;width:100%;height:100dvh;min-height:0;padding:0!important}
+ .app-rail{display:none!important}
+ .sidebar{position:fixed!important;inset:0!important;left:0!important;bottom:0!important;width:100%!important;max-width:none!important;height:calc(100dvh - 68px)!important;transform:none!important;box-shadow:none!important;border:0!important;border-radius:0!important;padding:0 0 8px!important;display:flex!important;z-index:4;overflow-y:auto;background:#0b1014!important}
+ .sidebar .brand-row{min-height:68px;padding:12px 18px!important;display:flex!important;align-items:center}
+ .sidebar .brand-mark{width:38px;height:38px}
+ .sidebar .brand-copy strong{font-size:24px}
+ .sidebar .mobile-close{display:none!important}
+ .profile-strip{margin:0 14px 12px!important;border-radius:15px!important}
+ .search-box{margin:0 14px 13px!important;min-height:48px}
+ .chat-filters{padding:0 14px 12px!important;overflow-x:auto;flex-wrap:nowrap}
+ .filter-chip{flex:none}
+ .chat-list{padding:0 8px 88px!important;overflow:visible!important}
+ .chat-item{min-height:76px;padding:10px 9px!important}
+ .chat-item .avatar{width:52px!important;height:52px!important;flex:none}
+ .chat-details{min-width:0}
+ .chat-topline strong{font-size:15px!important}
+ .chat-bottomline span{font-size:12px!important}
+ .sidebar-footer{display:none!important}
+ .main-panel{display:none!important;position:fixed!important;inset:0!important;width:100%!important;height:100dvh!important;min-height:0!important;z-index:5;padding-bottom:68px!important;background:#0b1014!important}
+ body.mobile-chat-open .sidebar,body.mobile-utility-open .sidebar{display:none!important}
+ body.mobile-chat-open .main-panel,body.mobile-utility-open .main-panel{display:flex!important}
+ .topbar{display:flex!important;min-height:60px!important;height:60px!important;padding:0 12px!important}
+ .topbar-title .eyebrow{display:none!important}
+ .menu-button{display:none!important}
+ .conversation{height:calc(100dvh - 128px)!important;min-height:0!important}
+ .conversation-header{height:60px!important;min-height:60px!important;padding:0 10px!important}
+ .conversation-back{display:grid!important;width:34px;height:40px;place-items:center;font-size:27px;margin-right:2px}
+ .conversation-person{gap:6px!important}
+ .conversation-person .avatar{width:38px;height:38px}
+ .conversation-tools{gap:2px}
+ .message-area{padding:14px 12px!important;overflow-y:auto!important}
+ .composer-wrap{padding:8px 8px calc(8px + env(safe-area-inset-bottom))!important}
+ .composer{gap:5px!important;padding:5px 7px!important}
+ .composer textarea{font-size:16px!important;min-height:38px!important}
+ .utility-view{height:calc(100dvh - 128px)!important;min-height:0!important;padding:0 0 18px!important;overflow-y:auto!important}
+ .mobile-bottom-nav{position:fixed;z-index:8;left:0;right:0;bottom:0;height:calc(66px + env(safe-area-inset-bottom));padding:5px 7px calc(5px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px;background:#111b21;border-top:1px solid #202b32}
+ .mobile-nav-item{font-size:10px;min-height:54px}
+ .mobile-nav-item svg{width:23px;height:23px}
+ .mobile-nav-item.active{border-radius:18px}
+ body:not(.light) .mobile-bottom-nav{background:#111b21;border-color:#202b32}
+ body.light .mobile-bottom-nav{background:#fff;border-color:#e4e8eb}
+ body.light .mobile-nav-item{color:#54656d}
+ body.light .mobile-nav-item.active{background:#d9fdd3;color:#075e54}
+ .marketplace-page{padding:18px 12px 28px}
+}
+@media(max-width:370px){.mobile-nav-item{font-size:9px}.mobile-nav-item svg{width:21px;height:21px}.chat-item .avatar{width:46px!important;height:46px!important}}
