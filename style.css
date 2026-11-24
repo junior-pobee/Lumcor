@@ -269,3 +269,14 @@ body:not(.light) .composer textarea{color:#111b21!important}
 body:not(.light) .utility-view h1{color:#111b21}
 @media(max-width:900px){.app-shell{grid-template-columns:64px minmax(300px,40vw) minmax(0,1fr)}.app-rail{padding-left:8px;padding-right:8px}.sidebar .brand-row{padding-left:17px;padding-right:17px}}
 @media(max-width:680px){.app-shell{grid-template-columns:58px minmax(0,1fr)}.app-rail{grid-column:1;width:58px;padding:14px 5px}.rail-button{width:44px;height:44px}.sidebar{position:fixed;left:58px;top:0;bottom:0;width:calc(100vw - 58px);height:100dvh;transform:translateX(-110%);transition:transform .22s ease;box-shadow:8px 0 28px #0002}.sidebar.open{transform:translateX(0)}.main-panel{grid-column:2;min-height:100dvh;height:100dvh}.menu-button{display:grid}.welcome-panel.whatsapp-empty-state h1{font-size:23px!important}.whatsapp-empty-state .encryption-note{font-size:10px;bottom:18px}.sidebar .mobile-close{display:none}}
+
+.app-rail{width:76px;min-width:76px;max-width:76px;overflow:hidden;align-items:center;gap:12px;padding:18px 10px}
+.app-rail .rail-button{width:46px;min-width:46px;max-width:46px;height:46px;min-height:46px;max-height:46px;padding:0;flex:0 0 46px;display:grid;place-items:center;overflow:hidden}
+.app-rail .rail-button svg{display:block;width:22px!important;height:22px!important;min-width:22px;min-height:22px;max-width:22px;max-height:22px;flex:none;overflow:visible}
+.app-rail .rail-create{font-size:25px!important;line-height:1}
+.app-rail .rail-spacer{min-height:12px}
+.app-rail svg,.sidebar svg,.topbar svg,.conversation svg,.composer svg{max-width:24px}
+.main-panel{background-size:360px 360px!important}
+body:not(.light) .main-panel{background-size:360px 360px!important}
+@media(max-width:900px){.app-shell{grid-template-columns:64px minmax(280px,40vw) minmax(0,1fr)}.app-rail{width:64px;min-width:64px;max-width:64px;padding-left:9px;padding-right:9px}.app-rail .rail-button{width:44px;min-width:44px;max-width:44px;height:44px;min-height:44px;max-height:44px;flex-basis:44px}.app-rail .rail-button svg{width:21px!important;height:21px!important;min-width:21px;min-height:21px;max-width:21px;max-height:21px}}
+@media(max-width:680px){.app-shell{grid-template-columns:56px minmax(0,1fr)}.app-rail{grid-column:1;width:56px;min-width:56px;max-width:56px;padding:14px 6px}.app-rail .rail-button{width:42px;min-width:42px;max-width:42px;height:42px;min-height:42px;max-height:42px;flex-basis:42px}.app-rail .rail-button svg{width:20px!important;height:20px!important;min-width:20px;min-height:20px;max-width:20px;max-height:20px}.sidebar{left:56px;width:calc(100vw - 56px)}.main-panel{grid-column:2}}
