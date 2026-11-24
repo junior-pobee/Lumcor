@@ -488,3 +488,24 @@ body:not(.light) .market-ad-composer .text-field{background:#202c33!important;co
  .marketplace-page{padding:18px 12px 28px}
 }
 @media(max-width:370px){.mobile-nav-item{font-size:9px}.mobile-nav-item svg{width:21px;height:21px}.chat-item .avatar{width:46px!important;height:46px!important}}
+
+@media(max-width:680px){
+ body.light .sidebar,body.light .main-panel{background:#f7f9fa!important;color:#111b21!important}
+ body.light .sidebar .brand-copy strong,body.light .profile-meta strong,body.light .chat-topline strong{color:#111b21!important}
+ body.light .profile-strip{background:#fff!important;border-color:#e1e7e9!important}
+ body.light .search-box{background:#f0f2f5!important}
+ body.light .filter-chip{background:#fff!important;color:#3b4a50!important;border-color:#d8dfe3!important}
+ body.light .filter-chip.active{background:#d9fdd3!important;color:#075e54!important}
+ body.light .chat-item:hover,body.light .chat-item.selected{background:#eaf1ef!important}
+ body.light .mobile-bottom-nav{background:#fff!important;border-color:#e4e8eb!important}
+ body.light .mobile-nav-item{color:#54656d!important}
+ body.light .mobile-nav-item.active{background:#d9fdd3!important;color:#075e54!important}
+ body.light .utility-view{background:#f7f9fa!important;color:#111b21!important}
+ body.light .topbar,body.light .conversation-header{background:#fff!important;color:#111b21!important}
+ body.light .message-area{background:#efeae2!important}
+ body.light .message-bubble{background:#fff!important;color:#111b21!important}
+ body.light .mine .message-bubble{background:#d9fdd3!important}
+ body.light .composer-wrap{background:#f0f2f5!important}
+ body.light .composer{background:#fff!important}
+ body.light .composer textarea{color:#111b21!important}
+}
