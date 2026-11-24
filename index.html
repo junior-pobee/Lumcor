@@ -65,12 +65,13 @@
 </main>
 </div>
 <div class="toast" id="toast" role="status"></div>
-<dialog class="modal" id="newChatModal">
-<form method="dialog" id="newChatForm">
-<div class="modal-heading"><div><span class="eyebrow">MAKE A CONNECTION</span><h2 id="modalTitle">Start a chat</h2></div><button class="icon-button" value="cancel" aria-label="Close">×</button></div>
-<label class="field-label" id="contactNameLabel" for="contactName">Name</label><input class="text-field" id="contactName" maxlength="40" placeholder="Enter a contact or group name" required>
+<dialog class="modal" id="newChatModal" aria-labelledby="modalTitle">
+<form id="newChatForm" novalidate>
+<div class="modal-heading"><div><span class="eyebrow">MAKE A CONNECTION</span><h2 id="modalTitle">Start a chat</h2></div><button class="icon-button" id="closeNewChatModal" type="button" aria-label="Close">×</button></div>
+<label class="field-label" id="contactNameLabel" for="contactName">Lumcor username</label><input class="text-field" id="contactName" maxlength="40" placeholder="Enter their username" autocomplete="off" required>
 <label class="field-label" for="contactAbout">Short description <span>optional</span></label><input class="text-field" id="contactAbout" maxlength="70" placeholder="What should people know?">
-<div class="modal-actions"><button class="secondary-button" value="cancel">Cancel</button><button class="primary-button" id="createChatButton" value="default">Create <span>→</span></button></div>
+<p class="modal-feedback" id="newChatFeedback" role="status" aria-live="polite"></p>
+<div class="modal-actions"><button class="secondary-button" id="cancelNewChatButton" type="button">Cancel</button><button class="primary-button" id="createChatButton" type="submit">Create <span>→</span></button></div>
 </form>
 </dialog>
 <dialog class="modal" id="settingsModal">
