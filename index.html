@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="auth-screen" id="authScreen"><div class="auth-card"><div class="brand-row auth-brand"><div class="brand-mark">L</div><div class="brand-copy"><strong>Lumcor</strong><span>Stay connected</span></div></div><span class="eyebrow">YOUR PEOPLE. YOUR SPACE.</span><h1 id="authHeading">Welcome to Lumcor</h1><p id="authDescription">Sign in to continue to your conversations.</p><form id="authForm"><div id="signupNameWrap" class="auth-field hidden"><label for="signupName">Display name</label><input id="signupName" class="text-field" maxlength="32" autocomplete="name" placeholder="Your name"></div><div class="auth-field"><label for="authEmail">Email address</label><input id="authEmail" class="text-field" type="email" autocomplete="email" required placeholder="you@example.com"></div><div class="auth-field"><label for="authPassword">Password</label><input id="authPassword" class="text-field" type="password" minlength="8" autocomplete="current-password" required placeholder="At least 8 characters"></div><button class="primary-button auth-submit" id="authSubmit" type="submit">Sign in <span>→</span></button></form><p class="auth-switch"><span id="authSwitchText">New to Lumcor?</span> <button type="button" id="authModeButton">Create an account</button></p><p class="auth-feedback" id="authFeedback" role="status"></p><p class="auth-privacy">Use an email address you control. Never share your password or verification codes.</p></div></div>
 <div class="app-shell">
 <aside class="sidebar" id="sidebar">
 <div class="brand-row">
@@ -25,6 +26,7 @@
 </div>
 <div class="sidebar-actions">
 <button class="action-button active" data-view="chats"><span>▣</span> Chats <b id="chatCount">0</b></button>
+<button class="action-button" data-view="connect"><span>⌁</span> Connect</button>
 <button class="action-button" data-view="status"><span>◉</span> Status</button>
 <button class="action-button" data-view="groups"><span>▦</span> Groups</button>
 <button class="action-button" data-view="calls"><span>⌕</span> Calls</button>
@@ -80,11 +82,13 @@
 <div class="modal-heading"><div><span class="eyebrow">PERSONALISE LUMCOR</span><h2>Settings</h2></div><button class="icon-button" value="cancel" aria-label="Close">×</button></div>
 <label class="field-label" for="displayNameInput">Display name</label><input class="text-field" id="displayNameInput" maxlength="32" placeholder="Your name">
 <div class="settings-row"><div><strong>Appearance</strong><span>Switch between light and dark themes</span></div><button class="secondary-button" id="settingsThemeButton" type="button">Toggle theme</button></div>
-<div class="settings-row"><div><strong>Preview data</strong><span>Clear conversations saved on this device</span></div><button class="danger-button" id="clearDataButton" type="button">Clear data</button></div>
-<p class="settings-disclaimer">Lumcor is currently running as a front-end preview. Real accounts, cross-device messaging, calls, media delivery and group sync need a connected backend.</p>
+<label class="field-label" for="usernameInput">Your username</label><input class="text-field" id="usernameInput" maxlength="24" placeholder="username">
+<div class="settings-row"><div><strong>Account</strong><span>Sign out of this device</span></div><button class="danger-button" id="signOutButton" type="button">Sign out</button></div>
+<p class="settings-disclaimer">Previously loaded conversations are available offline. Sending messages and publishing or viewing statuses require an internet connection.</p>
 <div class="modal-actions"><button class="secondary-button" value="cancel">Close</button><button class="primary-button" id="saveSettingsButton" value="default">Save changes <span>→</span></button></div>
 </form>
 </dialog>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.2/dist/umd/supabase.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
