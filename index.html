@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101a24">
+<title>Lumcor — Conversations that connect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+<div class="brand-row">
+<div class="brand-mark">L</div>
+<div class="brand-copy"><strong>Lumcor</strong><span>Stay connected</span></div>
+<button class="icon-button mobile-close" id="closeSidebar" aria-label="Close chats">×</button>
+</div>
+<div class="profile-strip">
+<div class="avatar avatar-self">M</div>
+<div class="profile-meta"><strong id="profileName">My account</strong><span>Available</span></div>
+<button class="icon-button" id="profileMenu" aria-label="Profile options">•••</button>
+</div>
+<div class="sidebar-actions">
+<button class="action-button active" data-view="chats"><span>▣</span> Chats <b id="chatCount">0</b></button>
+<button class="action-button" data-view="status"><span>◉</span> Status</button>
+<button class="action-button" data-view="groups"><span>▦</span> Groups</button>
+<button class="action-button" data-view="calls"><span>⌕</span> Calls</button>
+</div>
+<div class="section-heading"><span id="listHeading">MESSAGES</span><button class="text-action" id="newChatButton">＋ New</button></div>
+<label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search conversations"></label>
+<div class="chat-list" id="chatList"></div>
+<div class="sidebar-footer"><span class="online-dot"></span> Lumcor preview <span class="footer-version">v0.1</span></div>
+</aside>
+<main class="main-panel">
+<header class="topbar">
+<button class="icon-button menu-button" id="openSidebar" aria-label="Open chats">☰</button>
+<div class="topbar-title"><span class="eyebrow">YOUR SPACE</span><strong id="topbarTitle">Messages</strong></div>
+<div class="topbar-actions"><button class="icon-button" id="themeButton" aria-label="Toggle theme">☾</button><button class="icon-button" id="settingsButton" aria-label="Settings">⚙</button></div>
+</header>
+<section class="welcome-panel" id="welcomePanel">
+<div class="welcome-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="welcome-symbol">L</div><span class="spark spark-one">✦</span><span class="spark spark-two">✧</span></div>
+<p class="eyebrow">A BETTER WAY TO CONNECT</p>
+<h1>Every connection<br><span>starts somewhere.</span></h1>
+<p class="welcome-description">Choose a conversation, start a new chat, or create a group. Your Lumcor space is ready.</p>
+<button class="primary-button" id="welcomeNewChat">Start a conversation <span>→</span></button>
+<div class="welcome-note"><span class="online-dot"></span> Your conversations stay on this device in preview mode.</div>
+</section>
+<section class="conversation hidden" id="conversation">
+<header class="conversation-header">
+<div class="conversation-person"><div class="avatar" id="activeAvatar">A</div><div><strong id="activeName">Contact</strong><span id="activePresence">offline</span></div></div>
+<div class="conversation-tools"><button class="icon-button" id="callButton" aria-label="Call">⌕</button><button class="icon-button" id="conversationInfo" aria-label="Conversation information">ⓘ</button><button class="icon-button" id="conversationMenu" aria-label="More options">•••</button></div>
+</header>
+<div class="message-area" id="messageArea"><div class="date-divider"><span>TODAY</span></div></div>
+<div class="composer-wrap">
+<div class="composer" id="composer">
+<button class="icon-button attach-button" id="attachButton" aria-label="Attach">＋</button>
+<textarea id="messageInput" rows="1" placeholder="Write a message..." aria-label="Write a message"></textarea>
+<button class="send-button" id="sendButton" aria-label="Send message">➤</button>
+</div>
+<div class="composer-hint">Enter to send · Shift + Enter for a new line</div>
+</div>
+</section>
+<section class="utility-view hidden" id="utilityView"></section>
+</main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<dialog class="modal" id="newChatModal">
+<form method="dialog" id="newChatForm">
+<div class="modal-heading"><div><span class="eyebrow">MAKE A CONNECTION</span><h2 id="modalTitle">Start a chat</h2></div><button class="icon-button" value="cancel" aria-label="Close">×</button></div>
+<label class="field-label" for="contactName">Name</label><input class="text-field" id="contactName" maxlength="40" placeholder="Enter a contact or group name" required>
+<label class="field-label" for="contactAbout">Short description <span>optional</span></label><input class="text-field" id="contactAbout" maxlength="70" placeholder="What should people know?">
+<div class="modal-actions"><button class="secondary-button" value="cancel">Cancel</button><button class="primary-button" id="createChatButton" value="default">Create <span>→</span></button></div>
+</form>
+</dialog>
+<dialog class="modal" id="settingsModal">
+<form method="dialog">
+<div class="modal-heading"><div><span class="eyebrow">PERSONALISE LUMCOR</span><h2>Settings</h2></div><button class="icon-button" value="cancel" aria-label="Close">×</button></div>
+<label class="field-label" for="displayNameInput">Display name</label><input class="text-field" id="displayNameInput" maxlength="32" placeholder="Your name">
+<div class="settings-row"><div><strong>Appearance</strong><span>Switch between light and dark themes</span></div><button class="secondary-button" id="settingsThemeButton" type="button">Toggle theme</button></div>
+<div class="settings-row"><div><strong>Preview data</strong><span>Clear conversations saved on this device</span></div><button class="danger-button" id="clearDataButton" type="button">Clear data</button></div>
+<p class="settings-disclaimer">Lumcor is currently running as a front-end preview. Real accounts, cross-device messaging, calls, media delivery and group sync need a connected backend.</p>
+<div class="modal-actions"><button class="secondary-button" value="cancel">Close</button><button class="primary-button" id="saveSettingsButton" value="default">Save changes <span>→</span></button></div>
+</form>
+</dialog>
+<script src="main.js"></script>
+</body>
+</html>
